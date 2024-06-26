@@ -9,4 +9,6 @@ router.get("/:id", eventController.getById)
 router.put("/:id/:data", eventController.updateEvent)
 router.delete("/:id", eventController.deleteEvent)
 
+router.post('/event/:id/participate', eventController.participateEvent);
+
 export default router

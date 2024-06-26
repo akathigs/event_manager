@@ -73,3 +73,9 @@ export async function deleteUser(req,res){
         })
     }
 }
+export async function autenticadedRoute(req, res) {
+    res.status(200).json({
+        statusCode: 200,
+        message: "Rota autenticada com sucesso!",
+    });
+}

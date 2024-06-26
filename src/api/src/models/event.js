@@ -20,12 +20,10 @@ const eventSchema = new mongoose.Schema(
         },
         organizer: {
             type: String,
-            required: true,
         },
         participants: 
             {
-                type: String,
-            required: true,
+                type: String
             },
     },
     {

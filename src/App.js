@@ -1,6 +1,6 @@
 import React from "react"
 import {BrowserRouter as Router,Routes,Route, Navigate} from "react-router-dom"
-import {Login} from "./pages/index.js"
+import {Login, SignUp, CreateEvent, Event, MyEvent} from "./pages/index.js"
 
 function App() {
   return (
@@ -8,10 +8,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login"/>}></Route>
         <Route path="/login" element={<Login />}></Route>
-        {/* <Route path="/createEvent" element={<createEvent/>}></Route>
-        <Route path="/event" element={<event/>}></Route>
-        <Route path="/myEvent" element={<myEvent/>}></Route>
-        <Route path="/signup" element={<signup/>}></Route> */}
+        <Route path="/createEvent" element={<CreateEvent/>}></Route>
+        <Route path="/event" element={<Event/>}></Route>
+        <Route path="/myEvent" element={<MyEvent/>}></Route>
+        <Route path="/signup" element={<SignUp/>}></Route>
       </Routes>
     </Router>
   );

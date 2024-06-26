@@ -57,14 +57,14 @@ code {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom, #a8e6cf, #dcedc1);
+  background-color: #fff;
 }
 
 .login-form {
   background: #fff;
   padding: 20px 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -83,6 +83,7 @@ code {
   color: #333;
 }
 
+.input-group input[type="text"],
 .input-group input[type="email"],
 .input-group input[type="password"] {
   width: 100%;
@@ -91,19 +92,25 @@ code {
   border-radius: 5px;
 }
 
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+
 .login-button {
   width: 100%;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #4caf50;
+  background-color: #3498db;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
 .login-button:hover {
-  background-color: #45a049;
+  background-color: #2b7cb3;
 }
 
 .login-links {
@@ -112,11 +119,226 @@ code {
 
 .login-links a {
   display: block;
-  color: #4caf50;
+  color: #3498db;
   text-decoration: none;
   margin-top: 5px;
 }
 
 .login-links a:hover {
   text-decoration: underline;
+}
+
+.header {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1000; 
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin: 0;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001; 
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -290px;
+  width: 250px;
+  height: 100%;
+  background-color: #2980b9;
+  color: white;
+  transition: left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999; 
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.event-container {
+  padding: 20px;
+}
+
+.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-item {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h2 {
+  margin: 0 0 10px;
+}
+
+.event-item p {
+  margin: 5px 0;
+}
+
+.my-events-container {
+  padding: 20px;
+}
+
+.events-section {
+  margin-bottom: 40px;
+}
+
+.event-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-item {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-item h3 {
+  margin: 0 0 10px;
+}
+
+.event-item p {
+  margin: 5px 0;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.floating-button:hover {
+  background-color: #2980b9;
+}
+
+
+.create-event-container {
+  padding: 20px;
+}
+
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+.event-item button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.event-item button:hover {
+  background-color: #2980b9;
 }

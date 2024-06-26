@@ -11,6 +11,6 @@ router.put("/:id/:data", userController.updateUser)
 router.delete("/:id", userController.deleteUser)
 
 router.post("/login", authController.login)
-router.post("/private", authController.verificarToken)
+router.post('/private', authController.verificarToken, userController.autenticadedRoute)
 
 export default router
